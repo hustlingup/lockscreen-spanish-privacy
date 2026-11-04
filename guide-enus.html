@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lockademy Spanish User Guide</title>
+<style>
+  /* Layout idea: a phone-first single column, flat two-color like the app itself.
+     Yellow + ink for the header and section markers, plain paper for reading. */
+  :root {
+    --ink: #0d0d0d;
+    --ink-soft: #4a4a44;
+    --paper: #ffffff;
+    --yellow: #ffe600;
+    --rule: #d9d9d2;
+    --body: Roboto, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --display: Roboto, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+         font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+  header { background: var(--yellow); border-bottom: 4px solid var(--ink); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  header .wrap { padding-top: 36px; padding-bottom: 32px; }
+  .app { margin: 0 0 8px; font-weight: 700; letter-spacing: .02em; }
+  h1 { margin: 0 0 14px; font-family: var(--display); font-weight: 900;
+       font-size: clamp(2.25rem, 9vw, 3.25rem); line-height: 1.05;
+       letter-spacing: -.03em; text-wrap: balance; }
+  .lede { margin: 0; font-size: 1.15rem; max-width: 60ch; }
+  main { padding-top: 12px; padding-bottom: 48px; }
+  section { padding-top: 32px; }
+  h2 { margin: 0 0 12px; padding-bottom: 8px; border-bottom: 3px solid var(--ink);
+       font-family: var(--display); font-weight: 900; font-size: 1.6rem;
+       line-height: 1.2; letter-spacing: -.015em; text-wrap: balance; }
+  h3 { margin: 22px 0 6px; font-size: 1.1rem; font-weight: 800; line-height: 1.3; }
+  p { margin: 0 0 12px; max-width: 65ch; }
+  ol, ul { margin: 0 0 12px; padding-left: 1.4em; max-width: 65ch; }
+  li { margin-bottom: 8px; }
+  a { color: var(--ink); font-weight: 700; text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+  .label { font-weight: 800; }
+  .split { display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: start; margin-top: 16px; }
+  .split > * { min-width: 0; }
+  figure { margin: 0; }
+  figure img { display: block; width: 100%; max-width: 100%; height: auto;
+               border: 3px solid var(--ink); border-radius: 16px; }
+  figcaption { margin-top: 8px; font-size: .9rem; color: var(--ink-soft); }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 8px; }
+  th, td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--rule);
+           text-align: left; vertical-align: top; }
+  th { width: 38%; font-weight: 800; }
+  .note { margin: 16px 0 0; padding: 14px 16px; background: var(--yellow);
+          border: 3px solid var(--ink); border-radius: 12px; max-width: none; }
+  .note p:last-child { margin-bottom: 0; }
+  footer { border-top: 3px solid var(--ink); }
+  footer .wrap { padding-top: 20px; padding-bottom: 32px; font-size: .95rem; color: var(--ink-soft); }
+  @media (max-width: 620px) {
+    .split { grid-template-columns: 1fr; }
+    figure { max-width: 260px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="app">Lockademy: Lock Screen Spanish</p>
+    <h1>How to use the app</h1>
+    <p class="lede">Each time you turn on your phone's screen, a Spanish word appears. You study from that card, in a few seconds, without opening the app.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="setup">
+    <h2>Set it up</h2>
+    <ol>
+      <li>Open the app and answer the short setup questions. You can change every answer later.</li>
+      <li>When asked, allow <span class="label">Display over other apps</span>. The card can't appear without it. <span class="label">Notifications</span> and <span class="label">Ignore battery optimization</span> are recommended, because they keep the study service running.</li>
+      <li>On the <span class="label">Home</span> tab, make sure <span class="label">Lock screen study</span> is switched on.</li>
+      <li>Turn your screen off, then on again. Your first card appears. To see it without locking the phone, tap <span class="label">Preview the card</span> on the Home tab.</li>
+    </ol>
+  </section>
+
+  <section id="card">
+    <h2>Use the word card</h2>
+    <p>Tap the card to see the meaning, then tell the app whether you knew the word. That answer decides when you see the word again.</p>
+
+    <div class="split">
+      <figure>
+        <img src="guide-img/lockcard.png" width="1080" height="2340" alt="The study card showing the Spanish word soñar, its pronunciation, the meaning to dream, an example sentence, and five buttons along the bottom.">
+        <figcaption>The study card, with the meaning showing.</figcaption>
+      </figure>
+      <div>
+        <h3 style="margin-top:0">Bottom row, left to right</h3>
+        <table>
+          <tbody>
+            <tr><th scope="row">Left arrow ‹</th><td>Show again. You didn't know it, so it comes back soon. Swiping the card left does the same.</td></tr>
+            <tr><th scope="row">Trash can</th><td>Removes the word from your deck.</td></tr>
+            <tr><th scope="row">Round lock</th><td>Unlocks your phone with your usual PIN, pattern, fingerprint or face.</td></tr>
+            <tr><th scope="row">Star</th><td>Saves the word to your favorites.</td></tr>
+            <tr><th scope="row">Right arrow ›</th><td>I know this. It comes back later. Swiping the card right does the same.</td></tr>
+          </tbody>
+        </table>
+        <p>To hide the card without unlocking, swipe up from the very bottom edge of the screen.</p>
+      </div>
+    </div>
+
+    <h3>Top of the card</h3>
+    <table>
+      <tbody>
+        <tr><th scope="row">Speaker buttons</th><td>Read the time, the date, the word or the example sentence aloud in Spanish.</td></tr>
+        <tr><th scope="row">STUDY | QUIZ</th><td>Switches between word cards and quiz questions.</td></tr>
+        <tr><th scope="row">Half-filled circle</th><td>Changes the color theme. There are 18.</td></tr>
+        <tr><th scope="row">Flashlight, camera</th><td>Shortcuts, so the card never gets in the way of them.</td></tr>
+        <tr><th scope="row">Gear</th><td>Opens the app after you unlock.</td></tr>
+        <tr><th scope="row">‹ LEVEL ›</th><td>Changes the word level. Level 0 teaches the alphabet and its sounds. Levels 1 to 6 hold 10,000 words, starting with the most common.</td></tr>
+        <tr><th scope="row">Seen, Known, Mastered, New</th><td>Your progress. Tap any number for a short explanation.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="quiz">
+    <h2>Test yourself with the quiz</h2>
+    <div class="split">
+      <figure>
+        <img src="guide-img/quiz.png" width="1080" height="2340" alt="A quiz card with a Spanish sentence containing a blank, a Hint button, and four word choices.">
+        <figcaption>Quiz mode: pick the missing word.</figcaption>
+      </figure>
+      <div>
+        <p>Tap <span class="label">QUIZ</span> at the top of the card. You get a Spanish sentence with one word missing and four choices.</p>
+        <p>Stuck? Tap <span class="label">Hint</span> to see the sentence and all four choices in English.</p>
+        <p>Your answers count toward your progress, just like the arrows on a study card.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="review">
+    <h2>How words come back</h2>
+    <p>The app uses <span class="label">Smart review</span> by default. Words you find hard return soon, and words you know return less often, until a mastered word appears only about once a month.</p>
+    <p>The <span class="label">New</span> counter, such as 3/50, shows today's new words against your daily target. It is a pace, not a limit. You can keep studying after you reach it.</p>
+    <p>Prefer to go straight down the list? Choose <span class="label">In order</span> under Settings &gt; Word order. The arrows then move to the previous and next word.</p>
+  </section>
+
+  <section id="tabs">
+    <h2>Inside the app</h2>
+    <div class="split">
+      <figure>
+        <img src="guide-img/words.png" width="1080" height="2340" alt="The Words tab with a search box, filters for favorites, difficult and removed words, and a list of Spanish words with their meanings.">
+        <figcaption>The Words tab.</figcaption>
+      </figure>
+      <div>
+        <table>
+          <tbody>
+            <tr><th scope="row">Home</th><td>Your streak, today's progress, the on/off switch and the card preview.</td></tr>
+            <tr><th scope="row">Words</th><td>Search every word. Filter by favorites, difficult words or level. To bring back a word you removed, tap <span class="label">Removed</span>, then <span class="label">Restore</span>.</td></tr>
+            <tr><th scope="row">Stats</th><td>Your streak, word counts and quiz accuracy.</td></tr>
+            <tr><th scope="row">Settings</th><td>Everything below.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Settings most people change</h3>
+    <table>
+      <tbody>
+        <tr><th scope="row">Word level</th><td>Which level new words come from.</td></tr>
+        <tr><th scope="row">New words per day</th><td>Fewer new words keeps tomorrow's reviews light.</td></tr>
+        <tr><th scope="row">Display frequency</th><td>Every time, once an hour, every 3 hours, or off.</td></tr>
+        <tr><th scope="row">Always show meaning</th><td>Skips the tap and shows the meaning at once.</td></tr>
+        <tr><th scope="row">Quiet hours</th><td>No card during the hours you pick, such as overnight.</td></tr>
+        <tr><th scope="row">Daily reminders</th><td>Two study reminders a day, at times you choose. They are skipped if you studied recently.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="remove-ads">
+    <h2>The Remove Ads purchase</h2>
+    <p>The app and all of its features are free. Remove Ads is an optional one-time purchase that takes the ads off the lock screen card and out of the app. It is not a subscription, and there is nothing else to buy.</p>
+    <ul>
+      <li><span class="label">To check it worked:</span> open Settings and scroll to Ads. The Remove ads row shows <span class="label">Ads removed</span>.</li>
+      <li><span class="label">New phone or reinstall:</span> install the app with the same Google account and open it once while online. The ads stay off and you don't pay again.</li>
+      <li><span class="label">Other Lockademy apps:</span> the purchase covers this app only.</li>
+    </ul>
+  </section>
+
+  <section id="help">
+    <h2>If something isn't working</h2>
+
+    <h3>The card doesn't appear</h3>
+    <ol>
+      <li>On the Home tab, check that <span class="label">Lock screen study</span> is on.</li>
+      <li>In Settings &gt; Permissions, check that <span class="label">Display over other apps</span> is allowed.</li>
+      <li>In Settings, check that Display frequency isn't set to Off, and that you aren't inside your Quiet hours.</li>
+      <li>In Settings &gt; Permissions, allow <span class="label">Ignore battery optimization</span>. Samsung and Xiaomi phones have an extra setting for this, explained on the same screen.</li>
+    </ol>
+    <p>The card also steps aside during phone calls and while an alarm is ringing. That is intentional.</p>
+
+    <h3>I can't hear anything</h3>
+    <p>Your phone may not have a Spanish voice yet. Go to Settings &gt; Spanish voice and tap <span class="label">Install</span>. It's free.</p>
+
+    <h3>I still see ads after buying</h3>
+    <p>Open the app while connected to the internet, so it can confirm your purchase with Google Play. Then check Settings &gt; Ads.</p>
+
+    <h3>Samsung Wallet won't open from the lock screen</h3>
+    <p>Swipe up once from the very bottom to hide the card, then swipe again to open Wallet.</p>
+
+    <h3>There's always a "Lock screen study is on" notification</h3>
+    <p>That's normal. Android requires it while the app waits for your screen to turn on.</p>
+
+    <h3>I want to turn the card off</h3>
+    <p>Switch off <span class="label">Lock screen study</span> on the Home tab. Your progress is kept.</p>
+
+    <div class="note">
+      <p><span class="label">Still stuck?</span> Email <a href="mailto:hustlinup.org@gmail.com">hustlinup.org@gmail.com</a> or tap Contact us in Settings. A real person reads every message.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Guide for version 1.2.0. <a href="enus.html">Privacy policy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
